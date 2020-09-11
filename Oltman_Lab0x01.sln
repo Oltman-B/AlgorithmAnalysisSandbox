@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oltman_Lab0x01", "Oltman_Lab0x01\Oltman_Lab0x01.csproj", "{B2B27DC1-D5BC-4549-B2D4-AEBAE293C76D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2B27DC1-D5BC-4549-B2D4-AEBAE293C76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B27DC1-D5BC-4549-B2D4-AEBAE293C76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B27DC1-D5BC-4549-B2D4-AEBAE293C76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B27DC1-D5BC-4549-B2D4-AEBAE293C76D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {448414F8-0632-4D17-BFAF-ED20F5301272}
+	EndGlobalSection
+EndGlobal
