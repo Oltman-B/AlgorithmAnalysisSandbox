@@ -8,7 +8,6 @@ namespace Oltman_Lab0x01
         static void Main(string[] args)
         {
             var sandbox = new SearchSandbox();
-
             if (!sandbox.VerificationTests())
             {
                 Console.WriteLine("Verification Tests have failed. Quitting Program...");

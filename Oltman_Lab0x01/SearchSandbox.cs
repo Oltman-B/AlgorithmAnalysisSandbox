@@ -33,12 +33,17 @@ namespace Oltman_Lab0x01
         {
             for (int i = 0; i < Math.Max(length - _sortedValues.Count, length); i++)
             {
-                _sortedValues.Add(_rand.Next(min, max));
+                // Maintain sorted list with each insertion
+                int val = _rand.Next(min, max);
+                int insertIndex = _sortedValues.BinarySearch(val);
+                if (insertIndex < 0) insertIndex = ~insertIndex;
+                _sortedValues.Insert(insertIndex, val);
             }
         }
 
-        private void PrintSortedList()
+        public void PrintSortedList()
         {
+            GenerateSortedList(100, -2, 20);
             foreach (var num in _sortedValues)
             {
                 Console.Write($"{num}, ");
@@ -69,10 +74,10 @@ namespace Oltman_Lab0x01
         {
             int min = 0;
             int max = sortedList.Count - 1;
-
+            int mid = 0;
             while (min <= max)
             {
-                int mid = (max + min) / 2;
+                mid = (max + min) / 2;
                 if (sortedList[mid] == key) return mid;
                 if (key < sortedList[mid])
                 {
@@ -84,7 +89,7 @@ namespace Oltman_Lab0x01
                 }
             }
 
-            return -1;
+            return -mid;
         }
 
         public bool VerificationTests()
@@ -100,7 +105,7 @@ namespace Oltman_Lab0x01
             if (BinarySearch(sortedListOddCount, 55) != 5) return false;
             if (BinarySearch(sortedListEvenCount, 3000) != 11) return false;
             if (BinarySearch(sortedListEvenCount, -100) != 0) return false;
-            if (BinarySearch(sortedListEvenCount, 30000) != -1) return false;
+            if (BinarySearch(sortedListEvenCount, 30000) >= 0) return false;
 
 
             // All tests pass
